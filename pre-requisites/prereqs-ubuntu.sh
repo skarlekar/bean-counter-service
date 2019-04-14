@@ -116,7 +116,11 @@ fi
 # Install unzip, required to install hyperledger fabric.
 sudo apt-get -y install unzip
 
+# Install jq - the command-line JSON processor
 sudo apt-get install jq
+
+# Install ApacheBench(ab) utility
+sudo apt install apache2-utils
 
 # Print installation details for user
 echo ''

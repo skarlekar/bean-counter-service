@@ -1,7 +1,7 @@
 {
     "cluster": "bean-counter-cluster",
     "serviceName": "bean-counter-service",
-    "taskDefinition": "bean-counter-service-task:2",
+    "taskDefinition": "bean-counter-service-task",
     "loadBalancers": [
         {
             "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:219104658389:targetgroup/bean-counter-targets/b100fb23fd669c55",

@@ -76,7 +76,7 @@ def process_image(image_url):
             #coinImg.drawText(str(coinValue))
             #coinImg.save("Results/coin"+str(i)+".png")
 
-        message = "The total value of the coins is ${0}".format(value)
+        message = "The total value of the coins in the image is ${0}".format(value)
         print message
         return "{}".format(value)
 
