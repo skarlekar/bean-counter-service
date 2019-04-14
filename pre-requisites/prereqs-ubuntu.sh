@@ -122,6 +122,9 @@ sudo apt-get install jq
 # Install ApacheBench(ab) utility
 sudo apt install apache2-utils
 
+# Install AWS CLI
+sudo apt install awscli
+
 # Print installation details for user
 echo ''
 echo 'Installation completed, versions installed are:'
