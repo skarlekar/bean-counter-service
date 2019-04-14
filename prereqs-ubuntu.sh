@@ -116,6 +116,8 @@ fi
 # Install unzip, required to install hyperledger fabric.
 sudo apt-get -y install unzip
 
+sudo apt-get install jq
+
 # Print installation details for user
 echo ''
 echo 'Installation completed, versions installed are:'
