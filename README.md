@@ -38,5 +38,11 @@ source ./create-alb.sh
 # Generate bean counter service definition from the template
 ./generate-bean-counter-service-definition.sh subnet-095dd4d5cf2031bd3 subnet-0dfcc0afce1bb56d9 sg-03fe67d43722133c2
 
+# Create the service
+./create-bean-counter-service.sh
+
 # Set the scaling policy
 ./set-scaling-policy.sh
+
+# Test scaling
+./test-scaling.sh
