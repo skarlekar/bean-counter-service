@@ -6,11 +6,11 @@ echo VPC: $VPC was created
 aws ec2 create-tags --resources $VPC --tags Key=Name,Value=Bean-Counter-VPC
 
 # Create Subnets
-export SUBNET1=$(aws ec2 create-subnet --vpc-id $VPC --cidr-block 10.0.1.0/24 | jq '.Subnet.SubnetId' |  sed "s/\"//g")
+export SUBNET1=$(aws ec2 create-subnet --availability-zone us-east-1a --vpc-id $VPC --cidr-block 10.0.1.0/24 | jq '.Subnet.SubnetId' |  sed "s/\"//g")
 echo SUBNET: $SUBNET1 was created
 aws ec2 create-tags --resources $SUBNET1 --tags Key=Name,Value=Bean-Counter-Subnet1
 
-export SUBNET2=$(aws ec2 create-subnet --vpc-id $VPC --cidr-block 10.0.0.0/24 | jq '.Subnet.SubnetId' |  sed "s/\"//g")
+export SUBNET2=$(aws ec2 create-subnet --availability-zone us-east-1b --vpc-id $VPC --cidr-block 10.0.0.0/24 | jq '.Subnet.SubnetId' |  sed "s/\"//g")
 echo SUBNET: $SUBNET2 was created
 aws ec2 create-tags --resources $SUBNET2 --tags Key=Name,Value=Bean-Counter-Subnet2
 
