@@ -123,7 +123,8 @@ sudo apt-get install jq
 sudo apt install apache2-utils
 
 # Install AWS CLI
-sudo apt install awscli
+sudo apt install python3-pip
+pip3 install awscli --upgrade --user
 
 # Print installation details for user
 echo ''
