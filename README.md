@@ -31,6 +31,7 @@ Cheat: gen-bean-counter-task-def.sh
 ./register-bean-counter-task.sh
 
 # Create VPC, Subnets and Security groups for running Fargate
+source ./create-vpc-subnets.sh
 
 # Create the ALB
 source ./create-alb.sh
