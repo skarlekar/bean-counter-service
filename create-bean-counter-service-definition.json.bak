@@ -1,0 +1,46 @@
+{
+    "cluster": "bean-counter-cluster",
+    "serviceName": "bean-counter-service",
+    "taskDefinition": "bean-counter-service-task",
+    "loadBalancers": [
+        {
+            "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:219104658389:targetgroup/bean-counter-targets/b100fb23fd669c55",
+            "containerName": "bean-counter-container",
+            "containerPort": 8080
+        }
+    ],
+    "desiredCount": 2,
+    "clientToken": "",
+    "launchType": "FARGATE",
+    "platformVersion": "LATEST",
+    "role": "",
+    "deploymentConfiguration": {
+        "maximumPercent": 100,
+        "minimumHealthyPercent": 50
+    },
+    "networkConfiguration": {
+        "awsvpcConfiguration": {
+            "subnets": [
+		"subnet-095dd4d5cf2031bd3",
+                "subnet-0dfcc0afce1bb56d9"
+            ],
+            "securityGroups": [
+		"sg-03fe67d43722133c2"
+            ],
+            "assignPublicIp": "ENABLED"
+        }
+    },
+    "healthCheckGracePeriodSeconds": 0,
+    "schedulingStrategy": "REPLICA",
+    "deploymentController": {
+        "type": "ECS"
+    },
+    "tags": [
+        {
+            "key": "Purpose",
+            "value": "Demo"
+        }
+    ],
+    "enableECSManagedTags": true,
+    "propagateTags": "SERVICE"
+}
