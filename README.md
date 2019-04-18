@@ -20,7 +20,7 @@ source ./create-bean-counter-repository.sh
 ./create-bean-counter-cluster.sh
 
 # Create ecsTaskExecutionRole and taskRole in IAM and note down the ARNs
-./create-roles.sh
+source ./create-roles.sh
 
 # Generate bean counter task definition from the template
 ./generate-bean-counter-task-definition.sh $TASK_ROLE_ARN $TASK_ROLE_ARN
