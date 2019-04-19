@@ -126,6 +126,9 @@ sudo apt install apache2-utils
 sudo apt install python3-pip
 pip3 install awscli --upgrade --user
 
+# Install zip
+sudo apt install zip
+
 # Print installation details for user
 echo ''
 echo 'Installation completed, versions installed are:'
