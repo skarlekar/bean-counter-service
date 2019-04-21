@@ -1,7 +1,4 @@
-#export SUBNET1=subnet-095dd4d5cf2031bd3
-#export SUBNET2=subnet-0dfcc0afce1bb56d9
-#export SECURITYGROUP=sg-03fe67d43722133c2
-#export VPC=vpc-0e7ce2d5fcb76194e
+#!/bin/bash
 
 echo "Creating a application load balancer"
 export ALB_ARN=$(./_create-load-balancer.sh | jq '.LoadBalancers[0].LoadBalancerArn' |  sed "s/\"//g")
